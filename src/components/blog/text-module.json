@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blog_text_modules",
+  "info": {
+    "displayName": "textModule",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

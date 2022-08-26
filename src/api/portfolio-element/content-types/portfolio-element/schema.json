@@ -1,0 +1,117 @@
+{
+  "kind": "collectionType",
+  "collectionName": "portfolio_elements",
+  "info": {
+    "singularName": "portfolio-element",
+    "pluralName": "portfolio-elements",
+    "displayName": "portfolioElement",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "shortDescription": {
+      "type": "richtext",
+      "required": true
+    },
+    "elementType": {
+      "type": "enumeration",
+      "enum": [
+        "video",
+        "animated_video",
+        "hybrid_event",
+        "virtual_event"
+      ],
+      "required": true
+    },
+    "displayAsShowcase": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "thumbnailImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "thumbnailVideoUrl": {
+      "type": "string"
+    },
+    "brief": {
+      "displayName": "brief",
+      "type": "component",
+      "repeatable": false,
+      "component": "portfolio.brief"
+    },
+    "mainVideoUrl": {
+      "type": "string"
+    },
+    "whatWeDid": {
+      "type": "component",
+      "repeatable": false,
+      "component": "portfolio.brief"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "displayAsFeatured": {
+      "type": "boolean",
+      "default": false
+    },
+    "mainImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "outcomes": {
+      "displayName": "outcomes",
+      "type": "component",
+      "repeatable": true,
+      "component": "portfolio.outcomes"
+    }
+  }
+}

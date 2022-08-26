@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blog_complex_call_to_actions",
+  "info": {
+    "displayName": "complexCallToAction",
+    "icon": "exclamation-triangle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "buttonLabel": {
+      "type": "string"
+    },
+    "redirectUrl": {
+      "type": "string"
+    },
+    "explainer": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blog_simple_call_to_actions",
+  "info": {
+    "displayName": "simpleCallToAction",
+    "icon": "exclamation"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "redirectUrl": {
+      "type": "string"
+    }
+  }
+}

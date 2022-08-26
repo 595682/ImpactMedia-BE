@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_blog_section_titles",
+  "info": {
+    "displayName": "sectionTitle",
+    "icon": "bookmark"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

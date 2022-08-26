@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "client_feedbacks",
+  "info": {
+    "singularName": "client-feedback",
+    "pluralName": "client-feedbacks",
+    "displayName": "clientFeedback",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company.company"
+    },
+    "feedback": {
+      "type": "text"
+    },
+    "feedbackFrom": {
+      "displayName": "feedback",
+      "type": "component",
+      "repeatable": false,
+      "component": "feedback.feedback"
+    }
+  }
+}

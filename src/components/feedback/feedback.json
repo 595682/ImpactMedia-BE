@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_feedback_feedbacks",
+  "info": {
+    "displayName": "feedback",
+    "icon": "spell-check"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
