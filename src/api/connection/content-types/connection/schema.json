@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "connections",
+  "info": {
+    "singularName": "connection",
+    "pluralName": "connections",
+    "displayName": "connection",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "service": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "isQuot": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

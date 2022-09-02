@@ -2,8 +2,19 @@
   "collectionName": "components_portfolio_outcomes",
   "info": {
     "displayName": "outcomes",
-    "icon": "calendar-check"
+    "icon": "calendar-check",
+    "description": ""
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
 }
