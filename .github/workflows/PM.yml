@@ -16,8 +16,7 @@ jobs:
     # The type of runner that the job will run on
     runs-on: self-hosted
     strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x]
+      fail-fast: true
     steps:
       - name: add env variables
         run: |
