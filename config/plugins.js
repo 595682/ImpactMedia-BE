@@ -5,18 +5,18 @@ module.exports = ({ env }) => ({
   email: {
     provider: "smtp",
     providerOptions: {
-      host: "smtp.gmail.com", //SMTP Host
-      port: 465, //SMTP Port
+      host: env("EMAIL_HOST", "smtp.gmail.com"), //SMTP Host
+      port: env("EMAIL_PORT", 123), //SMTP Port
       secure: true,
-      username: "my.username@gmail.com",
-      password: "my.password",
+      username: env("EMAIL_USER", "un"),
+      password: env("EMAIL_PASSWORD", "pw"),
       rejectUnauthorized: true,
       requireTLS: true,
       connectionTimeout: 1,
     },
     settings: {
-      from: "my.username@gmail.com",
-      replyTo: "my.username@gmail.com",
+      from: env("EMAIL_FROM_ADDRESS", "my.username@gmail.com"),
+      replyTo: env("EMAIL_REPLYTO_ADDRESS", "my.username@gmail.com"),
     },
   },
   "preview-button": {
