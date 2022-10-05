@@ -34,7 +34,7 @@ jobs:
           echo "STRAPI_PREVIEW_SECRET=${{secrets.STRAPI_PREVIEW_SECRET}}">> .env
           
       - name: setup node packages
-        run: npm i
+        run: npm ci
       - name: setup pm2
         run: |
           pm2 stop IM_STRAPI
