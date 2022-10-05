@@ -16,6 +16,12 @@ jobs:
     # The type of runner that the job will run on
     runs-on: self-hosted
     steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: 16.x
+          registry-url: 'https://npm.pkg.github.com'
+      - run: npm i
       - name: add env variables
         run: |
           echo "ADMIN_JWT_SECRET=${{secrets.ADMIN_JWT_SECRET}}">> .env
@@ -32,7 +38,6 @@ jobs:
           echo "STRAPI_PREVIEW_DRAFT_URL=${{secrets.STRAPI_PREVIEW_DRAFT_URL}}">> .env
           echo "STRAPI_PREVIEW_PUBLISHED_URL=${{secrets.STRAPI_PREVIEW_PUBLISHED_URL}}">> .env
           echo "STRAPI_PREVIEW_SECRET=${{secrets.STRAPI_PREVIEW_SECRET}}">> .env
-      - run: npm i --loglevel=error
       - name: setup pm2
         run: |
           pm2 stop IM_STRAPI
