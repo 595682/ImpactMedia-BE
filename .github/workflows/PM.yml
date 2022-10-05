@@ -37,10 +37,7 @@ jobs:
           echo "STRAPI_PREVIEW_SECRET=${{secrets.STRAPI_PREVIEW_SECRET}}">> .env
           
       - name: Use Node.js ${{ matrix.node-version }}
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      - run: npm ci
+        run: npm ci
       - name: setup pm2
         run: |
           pm2 stop IM_STRAPI
