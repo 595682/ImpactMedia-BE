@@ -34,9 +34,11 @@ jobs:
           echo "STRAPI_PREVIEW_DRAFT_URL=${{secrets.STRAPI_PREVIEW_DRAFT_URL}}">> .env
           echo "STRAPI_PREVIEW_PUBLISHED_URL=${{secrets.STRAPI_PREVIEW_PUBLISHED_URL}}">> .env
           echo "STRAPI_PREVIEW_SECRET=${{secrets.STRAPI_PREVIEW_SECRET}}">> .env
-          
-      - name: Use Node.js ${{ matrix.node-version }}
-        run: npm i
+      - uses: actions/setup-node@v2.4.0
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm i
       - name: setup pm2
         run: |
           pm2 stop IM_STRAPI
