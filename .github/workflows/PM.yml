@@ -24,6 +24,7 @@ jobs:
       - run: npm i
       - name: add env variables
         run: |
+          echo "NODE_ENV=production">> .env
           echo "ADMIN_JWT_SECRET=${{secrets.ADMIN_JWT_SECRET}}">> .env
           echo "API_TOKEN_SALT=${{secrets.API_TOKEN_SALT}}">> .env
           echo "APP_KEYS=${{secrets.APP_KEYS}}">> .env
