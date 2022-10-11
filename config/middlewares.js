@@ -5,24 +5,27 @@ module.exports = [
     config: {
       contentSecurityPolicy: {
         directives: {
-          "connect-src": ["'self'", "https:", " https://fs.impact-media.eu"],
+          "connect-src": ["'self'", "https:", "https://fs.impact-media.eu"],
           "img-src": [
             "'self'",
             "data:",
             "blob:",
-            ` https://fs.impact-media.eu`,
+            `https://fs.impact-media.eu`,
+            `strapi.io`,
           ],
           "media-src": [
             "'self'",
             "data:",
             "blob:",
-            ` https://fs.impact-media.eu`,
+            `https://fs.impact-media.eu`,
+            `strapi.io`,
           ],
           "default-src": [
             "'self'",
             "data:",
             "blob:",
-            ` https://fs.impact-media.eu`,
+            `https://fs.impact-media.eu`,
+            `strapi.io`,
           ],
           upgradeInsecureRequests: null,
         },
@@ -35,7 +38,7 @@ module.exports = [
     config: {
       enabled: true,
       header: "*",
-      origin: ["https://fs.impact-media.eu"],
+      origin: "*",
     },
   },
   "strapi::poweredBy",
