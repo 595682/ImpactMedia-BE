@@ -1,6 +1,6 @@
 module.exports = ({ env }) => ({
   "generate-data": {
-    enabled: true,
+    enabled: false,
   },
   email: {
     config: {
@@ -47,6 +47,19 @@ module.exports = ({ env }) => ({
           },
         },
       ],
+    },
+  },
+  upload: {
+    config: {
+      provider: "strapi-provider-upload-ftp-v2",
+      providerOptions: {
+        host: env("FTP_HOST"),
+        port: env("FTP_PORT"),
+        user: env("FTP_USER"),
+        password: env("FTP_PASSWORD"),
+        basePath: env("FTP_BASEPATH"),
+        baseUrl: env("FTP_BASEURL"),
+      },
     },
   },
 });
