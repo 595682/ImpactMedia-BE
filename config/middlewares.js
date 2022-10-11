@@ -18,6 +18,12 @@ module.exports = [
             "blob:",
             ` https://fs.impact-media.eu`,
           ],
+          "video-src": [
+            "'self'",
+            "data:",
+            "blob:",
+            ` https://fs.impact-media.eu`,
+          ],
           upgradeInsecureRequests: null,
         },
       },
