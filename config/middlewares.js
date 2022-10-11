@@ -18,7 +18,7 @@ module.exports = [
             "blob:",
             ` https://fs.impact-media.eu`,
           ],
-          "video-src": [
+          "default-src": [
             "'self'",
             "data:",
             "blob:",
