@@ -30,6 +30,7 @@ jobs:
           echo "APP_KEYS=${{secrets.APP_KEYS}}">> .env
           echo "DATABASE_HOST=${{secrets.DATABASE_HOST}}">> .env
           echo "DATABASE_PASSWORD=${{secrets.DATABASE_PASSWORD}}">> .env
+          echo "DATABASE_SCHEMA=${{secrets.DATABASE_SCHEMA}}">> .env
           echo "DATABASE_PORT=${{secrets.DATABASE_PORT}}">> .env
           echo "DATABASE_SSL_SELF=${{secrets.DATABASE_SSL_SELF}}">> .env
           echo "DATABASE_USERNAME=${{secrets.DATABASE_USERNAME}}">> .env
