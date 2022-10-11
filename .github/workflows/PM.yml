@@ -46,6 +46,14 @@ jobs:
           echo "EMAIL_PASSWORD=${{secrets.EMAIL_PASSWORD}}">> .env
           echo "EMAIL_FROM_ADDRESS=${{secrets.EMAIL_FROM_ADDRESS}}">> .env
           echo "EMAIL_REPLYTO_ADDRESS=${{secrets.EMAIL_REPLYTO_ADDRESS}}">> .env
+          echo "FTP_HOST=${{secrets.FTP_HOST}}">> .env
+          echo "FTP_PORT=${{secrets.FTP_PORT}}">> .env
+          echo "FTP_USER=${{secrets.FTP_USER}}">> .env
+          echo "FTP_PASSWORD=${{secrets.FTP_PASSWORD}}">> .env
+          echo "FTP_BASEPATH=${{secrets.FTP_BASEPATH}}">> .env
+          echo "FTP_BASEURL=${{secrets.FTP_BASEURL}}">> .env
+          
+          
       - name: build strapi
         run: npm run build
       - name: setup pm2
