@@ -6,20 +6,23 @@ module.exports = ({ env }) => ({
     config: {
       provider: "strapi-provider-email-smtp",
       providerOptions: {
-        host: env("EMAIL_HOST", "smtp.gmail.com"), //SMTP Host
+        host: env("EMAIL_HOST"), //SMTP Host
         port: env("EMAIL_PORT", 123), //SMTP Port
         secure: true,
-        username: env("EMAIL_USER", "un"),
-        password: env("EMAIL_PASSWORD", "pw"),
+        username: env("EMAIL_USER"),
+        password: env("EMAIL_PASSWORD"),
         rejectUnauthorized: true,
         requireTLS: true,
         connectionTimeout: 1,
       },
-      settings: {
-        from: env("EMAIL_FROM_ADDRESS", "my.username@gmail.com"),
-        replyTo: env("EMAIL_REPLYTO_ADDRESS", "my.username@gmail.com"),
-      },
     },
+    settings: {
+      from: env("EMAIL_FROM_ADDRESS"),
+      replyTo: env("EMAIL_REPLYTO_ADDRESS"),
+    },
+  },
+  seo: {
+    enabled: true,
   },
   "preview-button": {
     enabled: true,
