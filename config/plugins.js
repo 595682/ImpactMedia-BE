@@ -17,7 +17,7 @@ module.exports = ({ env }) => ({
       },
     },
     settings: {
-      defaultFrom: env("EMAIL_FROM_ADDRESS", "office@impact-media.be"),
+      defaultFrom: "office@impact-media.be",
       defaultReplyTo: env("EMAIL_REPLYTO_ADDRESS", "office@impact-media.be"),
     },
   },
