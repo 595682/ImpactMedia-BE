@@ -9,7 +9,6 @@ const emailTemplate = {
   `,
   html: `<h1>Somebody sent you a request from the IMPACT MEDIA site</h1>
   <h2>With the following data:</h2>
-      <p><strong>Contact Type:</strong> <% if(request.isQuot) { return "QUOTATION" } else {return "CONTACT"} %><p>
       <p><strong>First Name:</strong> <%= request.firstName %><p>
       <p><strong>Last Name:</strong> <%= request.lastName %><p>
       <p><strong>Email:</strong> <%= request.email %><p>
@@ -39,7 +38,7 @@ ctx.request.body= {
     try {
       await strapi.plugins["email"].services.email.sendTemplatedEmail(
         {
-          to: "istvan@boostern.com",
+          to: process.env.EMAIL_FROM_ADDRESS,
           from: process.env.EMAIL_FROM_ADDRESS,
         },
         {
