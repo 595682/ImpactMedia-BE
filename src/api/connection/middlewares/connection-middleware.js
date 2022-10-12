@@ -1,8 +1,24 @@
 const emailTemplate = {
-  text: `Welcome to mywebsite.fr!
-      Your account is now linked with: <%= request.email %>.`,
-  html: `<h1>Welcome to mywebsite.fr!</h1>
-      <p>Your account is now linked with: <%= request.email %>.<p>`,
+  text: `Somebody sent you a request from the IMPACT MEDIA site
+  The following data was sent:
+  First Name: <%= request.firstName %>
+  Last Name: <%= request.lastName %>
+  Email: <%= request.email %>
+  Request: <%= request.description %>
+  Any particular service: <%= request.service %>
+  `,
+  html: `<h1>Somebody sent you a request from the IMPACT MEDIA site</h1>
+  <h2>The following data was sent:</h2>
+      <p>First Name: <%= request.firstName %><p>
+      <br />
+      <p>Last Name: <%= request.lastName %><p>
+      <br />
+      <p>Email: <%= request.email %><p>
+      <br />
+      <p>Request: <%= request.description %><p>
+      <br />
+      <p>Any particular service: <%= request.service %><p>
+      `,
 };
 
 module.exports = () => {
