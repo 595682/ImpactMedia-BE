@@ -1,6 +1,6 @@
 const emailTemplate = {
   text: `Somebody sent you a request from the IMPACT MEDIA site
-  The following data was sent:
+  With the following data:
   First Name: <%= request.firstName %>
   Last Name: <%= request.lastName %>
   Email: <%= request.email %>
@@ -8,16 +8,13 @@ const emailTemplate = {
   Any particular service: <%= request.service %>
   `,
   html: `<h1>Somebody sent you a request from the IMPACT MEDIA site</h1>
-  <h2>The following data was sent:</h2>
-      <p>First Name: <%= request.firstName %><p>
-      <br />
-      <p>Last Name: <%= request.lastName %><p>
-      <br />
-      <p>Email: <%= request.email %><p>
-      <br />
-      <p>Request: <%= request.description %><p>
-      <br />
-      <p>Any particular service: <%= request.service %><p>
+  <h2>With the following data:</h2>
+      <p><strong>Contact Type:</strong> <% if(request.isQuot) { return "QUOTATION" } else {return "CONTACT"} %><p>
+      <p><strong>First Name:</strong> <%= request.firstName %><p>
+      <p><strong>Last Name:</strong> <%= request.lastName %><p>
+      <p><strong>Email:</strong> <%= request.email %><p>
+      <p><strong>Request:</strong> <%= request.description %><p>
+      <p><strong>Any particular service:</strong> <%= request.service %><p>
       `,
 };
 
@@ -42,7 +39,7 @@ ctx.request.body= {
     try {
       await strapi.plugins["email"].services.email.sendTemplatedEmail(
         {
-          to: "istvan@boostern.com",
+          to: process.env.EMAIL_FROM_ADDRESS,
           from: process.env.EMAIL_FROM_ADDRESS,
         },
         {
