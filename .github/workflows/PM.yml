@@ -28,6 +28,7 @@ jobs:
           echo "ADMIN_JWT_SECRET=${{secrets.ADMIN_JWT_SECRET}}">> .env
           echo "API_TOKEN_SALT=${{secrets.API_TOKEN_SALT}}">> .env
           echo "APP_KEYS=${{secrets.APP_KEYS}}">> .env
+          echo "APP_BASE_URL=${{secrets.APP_BASE_URL}}">> .env
           echo "DATABASE_HOST=${{secrets.DATABASE_HOST}}">> .env
           echo "DATABASE_PASSWORD=${{secrets.DATABASE_PASSWORD}}">> .env
           echo "DATABASE_SCHEMA=${{secrets.DATABASE_SCHEMA}}">> .env
