@@ -5,7 +5,12 @@ module.exports = [
     config: {
       contentSecurityPolicy: {
         directives: {
-          "connect-src": ["'self'", "https:", "https://fs.impact-media.eu"],
+          "connect-src": [
+            "'self'",
+            "https:",
+            "blob:",
+            "https://fs.impact-media.eu",
+          ],
           "img-src": [
             "'self'",
             "data:",
@@ -38,7 +43,7 @@ module.exports = [
     name: "strapi::cors",
     config: {
       enabled: true,
-      header: "*",
+      headers: "*",
       origin: ["https://backend.impact-media.eu", "https://fs.impact-media.eu"],
     },
   },
