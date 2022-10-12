@@ -10,12 +10,14 @@ module.exports = [
             "https:",
             "blob:",
             "https://fs.impact-media.eu",
+            "https://dl.airtable.com",
           ],
           "img-src": [
             "'self'",
             "data:",
             "blob:",
             `https://fs.impact-media.eu`,
+            "https://dl.airtable.com",
             `strapi.io`,
           ],
           "media-src": [
@@ -23,6 +25,7 @@ module.exports = [
             "data:",
             "blob:",
             `https://fs.impact-media.eu`,
+            "https://dl.airtable.com",
             `strapi.io`,
           ],
           "default-src": [
@@ -30,6 +33,7 @@ module.exports = [
             "data:",
             "blob:",
             `https://fs.impact-media.eu`,
+            "https://dl.airtable.com",
             `strapi.io`,
           ],
           upgradeInsecureRequests: null,
