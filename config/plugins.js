@@ -15,10 +15,10 @@ module.exports = ({ env }) => ({
         requireTLS: true,
         connectionTimeout: 1,
       },
-    },
-    settings: {
-      defaultFrom: "office@impact-media.be",
-      defaultReplyTo: env("EMAIL_REPLYTO_ADDRESS", "office@impact-media.be"),
+      settings: {
+        defaultFrom: env("EMAIL_FROM_ADDRESS", "office@impact-media.be"),
+        defaultReplyTo: env("EMAIL_REPLYTO_ADDRESS", "office@impact-media.be"),
+      },
     },
   },
   seo: {
