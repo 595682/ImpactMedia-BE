@@ -41,15 +41,20 @@ module.exports = [
       },
     },
   },
+  "strapi::cors",
   "strapi::poweredBy",
-  {
+  /*   {
     name: "strapi::cors",
     config: {
       enabled: true,
       headers: "*",
-      origin: ["https://backend.impact-media.eu", "https://fs.impact-media.eu"],
+      origin: [
+        "https://backend.impact-media.eu",
+        "https://fs.impact-media.eu",
+        "http://localhost:1337",
+      ],
     },
-  },
+  }, */
 
   "strapi::logger",
   "strapi::query",

@@ -1,9 +1,15 @@
-'use strict';
+"use strict";
 
 /**
  * connection router.
  */
 
-const { createCoreRouter } = require('@strapi/strapi').factories;
+const { createCoreRouter } = require("@strapi/strapi").factories;
 
-module.exports = createCoreRouter('api::connection.connection');
+module.exports = createCoreRouter("api::connection.connection", {
+  config: {
+    create: {
+      middlewares: ["api::connection.connection-middleware"],
+    },
+  },
+});
