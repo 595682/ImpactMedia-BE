@@ -19,10 +19,6 @@
     "subtitle": {
       "type": "string"
     },
-    "shortDescription": {
-      "type": "richtext",
-      "required": true
-    },
     "elementType": {
       "type": "enumeration",
       "enum": [
@@ -59,9 +55,6 @@
         "videos",
         "audios"
       ]
-    },
-    "thumbnailVideoUrl": {
-      "type": "string"
     },
     "brief": {
       "displayName": "brief",
