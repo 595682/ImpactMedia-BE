@@ -25,7 +25,9 @@
         "video",
         "animated_video",
         "live_stream",
-        "event"
+        "event",
+        "branding",
+        "campaign"
       ],
       "required": true
     },
