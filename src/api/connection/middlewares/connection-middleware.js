@@ -38,7 +38,7 @@ ctx.request.body= {
     try {
       await strapi.plugins["email"].services.email.sendTemplatedEmail(
         {
-          to: process.env.EMAIL_FROM_ADDRESS,
+          to: [process.env.EMAIL_FROM_ADDRESS, process.env.EMAIL_FROM_ADDRESS2],
           from: process.env.EMAIL_FROM_ADDRESS,
         },
         {

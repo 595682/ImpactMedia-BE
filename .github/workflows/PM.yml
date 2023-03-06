@@ -20,7 +20,7 @@ jobs:
       - uses: actions/setup-node@master
         with:
           node-version: 16.x
-          registry-url: 'https://npm.pkg.github.com'
+          registry-url: "https://npm.pkg.github.com"
       - run: npm i
       - name: add env variables
         run: |
@@ -46,15 +46,16 @@ jobs:
           echo 'EMAIL_USER=${{secrets.EMAIL_USER}}'>> .env
           echo 'EMAIL_PASSWORD=${{secrets.EMAIL_PASSWORD}}'>> .env
           echo 'EMAIL_FROM_ADDRESS=${{secrets.EMAIL_FROM_ADDRESS}}'>> .env
+          echo 'EMAIL_FROM_ADDRESS2=${{secrets.EMAIL_FROM_ADDRESS2}}'>> .env
           echo 'EMAIL_REPLYTO_ADDRESS=${{secrets.EMAIL_REPLYTO_ADDRESS}}'>> .env
+          echo 'EMAIL_REPLYTO_ADDRESS2=${{secrets.EMAIL_REPLYTO_ADDRESS2}}'>> .env
           echo 'FTP_HOST=${{secrets.FTP_HOST}}'>> .env
           echo 'FTP_PORT=${{secrets.FTP_PORT}}'>> .env
           echo 'FTP_USER=${{secrets.FTP_USER}}'>> .env
           echo 'FTP_PASSWORD=${{secrets.FTP_PASSWORD}}'>> .env
           echo 'FTP_BASEPATH=${{secrets.FTP_BASEPATH}}'>> .env
           echo 'FTP_BASEURL=${{secrets.FTP_BASEURL}}'>> .env
-          
-          
+
       - name: build strapi
         run: npm run build
       - name: setup pm2
