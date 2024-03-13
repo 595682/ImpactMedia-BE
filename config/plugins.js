@@ -16,8 +16,8 @@ module.exports = ({ env }) => ({
         connectionTimeout: 1,
       },
       settings: {
-        defaultFrom: env("EMAIL_FROM_ADDRESS", "matthias.tonitz@impact-media.be"),
-        defaultReplyTo: env("EMAIL_REPLYTO_ADDRESS", "matthias.tonitz@impact-media.be"),
+        defaultFrom: env("EMAIL_FROM_ADDRESS", "office@impact-media.be"),
+        defaultReplyTo: env("EMAIL_REPLYTO_ADDRESS", "office@impact-media.be"),
       },
     },
   },
